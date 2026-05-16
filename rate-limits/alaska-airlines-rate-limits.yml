@@ -1,0 +1,30 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Alaska Airlines
+providerId: alaska-airlines
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Airlines
+  - Rate Limiting
+description: Alaska Airlines does not publish a public developer API; therefore there are no public rate limits. Distribution traffic from GDS / NDC partners is governed by industry-standard messaging-fee structures rather than by per-call rate caps.
+notes: No public developer API — placeholder only.
+sources:
+  - https://www.alaskaair.com/
+responseCodes:
+  throttled: 429
+limits:
+  - name: No public rate limits
+    scope: account
+    metric: not_applicable
+    limit: not applicable
+policies:
+  - name: GDS / NDC distribution
+    description: GDS and NDC traffic operates under industry messaging-volume agreements; per-second / per-minute call rates are not publicly disclosed.
+  - name: Bilateral partner limits
+    description: Any rate limits on direct partner integrations are defined inside the bilateral contract.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

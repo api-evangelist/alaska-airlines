@@ -1,0 +1,56 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Alaska Airlines
+providerId: alaska-airlines
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Airlines
+  - FinOps
+  - FOCUS
+description: Alaska Airlines has no public developer API and no metered API billing surface. Commercial flows for travel distribution run through GDS messaging fees and agency commissions; corporate-travel and partner agreements run through bilateral contracts.
+notes: No public developer API — placeholder only.
+sources:
+  - https://www.alaskaair.com/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Alaska Airlines, Inc.
+serviceCategory: Travel / Airlines
+billingModel:
+  pricingCategory: Contract
+  billingFrequency: Per-Invoice
+  billingCurrency: USD
+  chargeCategories:
+    - Purchase
+focusColumns:
+  ServiceName: Alaska Airlines Distribution
+  ServiceCategory: Travel / Airlines
+  ProviderName: Alaska Airlines
+  PublisherName: Alaska Airlines, Inc.
+  InvoiceIssuerName: Alaska Airlines, Inc.
+  BillingCurrency: USD
+meters:
+  - name: ticket
+    description: Ticketed-segment unit underlying GDS / NDC distribution economics — not directly metered through an API.
+    unit: ticket
+    aggregation: sum
+    dimensions:
+      - channel
+principles:
+  - name: Visibility
+    description: Track distribution cost as GDS / NDC messaging and commission spend on the airline P&L.
+  - name: Allocation
+    description: Allocate distribution and partner cost to commercial / revenue-management; allocate corporate-travel cost to the buyer's T&E line.
+  - name: Optimization
+    description: Optimize by steering eligible content from GDS to NDC channels where commercials are favorable.
+  - name: Accountability
+    description: Distribution / revenue-management leadership owns commercial terms; IT owns the underlying integration runtime.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

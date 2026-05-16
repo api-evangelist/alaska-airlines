@@ -9,9 +9,68 @@ tags:
   - Transportation
 description: 'A major American airline headquartered in SeaTac, Washington, operating an extensive domestic network with service across the U.S., Mexico, Canada, and Central America. Known for its customer service and West Coast focus.'
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-16'
 specificationVersion: '0.19'
 apis: []
 common:
   - type: Website
     url: https://www.alaskaair.com/
+  - type: Login
+    url: https://www.alaskaair.com/account/login
+  - type: SignUp
+    url: https://www.alaskaair.com/account/enrollment
+  - type: MileagePlan
+    url: https://www.alaskaair.com/content/mileage-plan
+  - type: Features
+    data:
+      - name: Mileage Plan Loyalty
+        description: Alaska Airlines' Mileage Plan loyalty program supporting earn-and-burn across Alaska, Hawaiian, and Oneworld partners.
+      - name: Flight Booking
+        description: Direct distribution of Alaska Airlines fares through alaskaair.com, the mobile app, and indirectly through GDS / NDC distribution.
+      - name: Flight Status
+        description: Real-time flight-status surface on alaskaair.com, the mobile app, and via airport / partner integrations.
+      - name: Check-In and Boarding
+        description: Mobile check-in, mobile boarding pass, and Apple Wallet / Google Wallet support.
+      - name: Lounge Access
+        description: Access to Alaska Lounges across the West Coast and select hubs for premium-cabin and Mileage Plan elite members.
+  - type: UseCases
+    data:
+      - name: Domestic and Near-International Air Travel
+        description: Scheduled commercial air travel across the U.S., Mexico, Canada, Central America, and to Hawaii.
+      - name: Loyalty Earn / Burn
+        description: Earning and redeeming Mileage Plan miles on Alaska, Hawaiian, and Oneworld partner flights.
+      - name: Corporate Travel
+        description: Corporate travel program with negotiated fares via Alaska Airlines Business and TMC integration.
+      - name: Cargo
+        description: Alaska Air Cargo services for the U.S., Mexico, and Latin America operating on Alaska's mainline and freighter network.
+  - type: Authentication
+    data:
+      - name: No Public Developer API
+        description: Alaska Airlines does not publish a public developer portal or self-service developer API. Distribution to travel agencies and aggregators is via Sabre / Amadeus GDS feeds and NDC partnerships; direct technical integration requires a bilateral commercial agreement.
+  - type: Compliance
+    data:
+      - name: PCI DSS
+        description: Payment Card Industry Data Security Standard compliance for ticket sales and loyalty redemptions.
+      - name: TSA Secure Flight
+        description: Mandatory passenger pre-screening data exchange with the U.S. Transportation Security Administration under Secure Flight.
+      - name: DOT Tarmac Delay
+        description: U.S. Department of Transportation tarmac-delay and consumer-protection rules apply to Alaska's domestic operations.
+      - name: FAA Part 121
+        description: FAA Part 121 air-carrier certification governs Alaska's flight operations.
+      - name: GDPR / CCPA
+        description: Privacy compliance for European and California passengers respectively.
+  - type: Integrations
+    data:
+      - name: Oneworld Alliance
+        description: Alaska Airlines is a member of the Oneworld global airline alliance, enabling codeshare, loyalty, and lounge reciprocity with other carriers.
+      - name: Hawaiian Airlines
+        description: Alaska Air Group has acquired Hawaiian Airlines; the two carriers' Mileage Plan / HawaiianMiles programs and operations are progressively integrated.
+      - name: Sabre / Amadeus
+        description: GDS distribution to travel agencies and corporate booking tools through Sabre and Amadeus.
+      - name: NDC
+        description: IATA NDC (New Distribution Capability) channel for richer offer-and-order content distribution to NDC-enabled partners.
+      - name: Bank of America (co-brand)
+        description: Alaska Airlines Visa credit card portfolio is issued by Bank of America and earns Mileage Plan miles.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

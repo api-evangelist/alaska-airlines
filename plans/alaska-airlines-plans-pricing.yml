@@ -1,0 +1,57 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Alaska Airlines
+providerId: alaska-airlines
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Airlines
+  - Travel
+description: Alaska Airlines does not publish a public developer API or developer portal. Travel-trade distribution is sold through GDS and NDC channels; corporate and TMC programs are sold through Alaska Airlines Business; direct partner APIs are bilateral and non-public.
+notes: No public developer API — placeholder only. Pricing for distribution flows through GDS/NDC and corporate-travel agreements rather than an API plan.
+sources:
+  - https://www.alaskaair.com/
+plans:
+  - id: alaska-airlines-gds-ndc
+    name: GDS / NDC Distribution
+    type: enterprise
+    description: Travel-agency, TMC, and aggregator distribution flows through Sabre / Amadeus GDS and the IATA NDC channel. Commercial terms are between Alaska Airlines, the GDS, and the agency / aggregator.
+    entries:
+      - label: GDS / NDC channel
+        name: gds_ndc_channel
+        type: distribution
+        metric: ticket
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: GDS fee + agency commission per industry norms
+        userMultiplied: false
+    elements:
+      - name: Sabre / Amadeus GDS distribution
+      - name: IATA NDC distribution
+      - name: No self-service developer plan
+  - id: alaska-airlines-bilateral-partner
+    name: Bilateral Partner Integration
+    type: enterprise
+    description: Direct partner integrations (corporate-travel, codeshare, loyalty) are negotiated under bilateral agreements.
+    entries:
+      - label: Partner contract
+        name: partner_contract
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact Alaska Airlines Business / Distribution
+        userMultiplied: false
+    elements:
+      - name: Corporate-travel programs
+      - name: Codeshare / interline partners
+      - name: Loyalty co-brand partners
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
