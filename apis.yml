@@ -21,7 +21,7 @@ common:
     url: https://www.alaskaair.com/
   - type: Login
     url: https://www.alaskaair.com/account/login
-  - type: SignUp
+  - type: Signup
     url: https://www.alaskaair.com/account/enrollment
   - type: MileagePlan
     url: https://www.alaskaair.com/content/mileage-plan
