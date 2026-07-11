@@ -13,6 +13,8 @@ modified: '2026-05-16'
 specificationVersion: '0.19'
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/alaska-airlines-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/AlaskaAirlines
   - type: LinkedIn
@@ -75,6 +77,8 @@ common:
         description: IATA NDC (New Distribution Capability) channel for richer offer-and-order content distribution to NDC-enabled partners.
       - name: Bank of America (co-brand)
         description: Alaska Airlines Visa credit card portfolio is issued by Bank of America and earns Mileage Plan miles.
+  - url: https://news.alaskaair.com/feed/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
