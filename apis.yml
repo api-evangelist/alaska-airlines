@@ -22,7 +22,7 @@ tags:
 description: 'A major American airline headquartered in SeaTac, Washington, operating an extensive domestic network with service across the U.S., Mexico, Canada, and Central America. Known for its customer service and West Coast focus.'
 created: '2026-05-05'
 modified: '2026-05-16'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis: []
 common:
   - type: DomainSecurity
